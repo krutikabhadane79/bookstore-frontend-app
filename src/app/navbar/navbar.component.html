@@ -1,0 +1,48 @@
+<mat-toolbar class="bg-color navbar" color="primary">
+  <div class="container ml">
+    <div class="first-item">
+      <div routerLink="/home" class="logo-container">
+        <img
+        
+          src="../assets/education.svg"
+          alt="employee payroll icon"
+        />
+        <div class="title-container">
+          <span class="title">Bookstore</span><br />
+        </div>
+      </div>
+      <div class="search-container">
+        <input type="text" #searchBox [(ngModel)]="searchTerm" (keyup.enter)="search()"  class="search"  placeholder="Search.."/>
+        <button mat-flat-button class="button" (click)="search()">
+          <mat-icon
+          fontIcon="search"
+          class="icon"
+        ></mat-icon>
+        </button>
+   
+      </div>
+    </div>
+    <div class="second-item" >
+      <div *ngIf="(user|json)==='{}'" class="options" routerLink="/login">
+        <span>Login</span>
+      </div >
+      <div *ngIf="(user|json)==='{}'" class="options" routerLink="/register">
+        <span>Register</span>
+      </div>
+      <div *ngIf="(user|json)!=='{}'" class="options" >
+        <span>Hi! {{user.firstName}}</span>
+      </div>
+      <div *ngIf="(user|json)!=='{}'&&user.verified!=='false'" routerLink="/wishlist" class="options" >
+        <span>Wishlist</span>
+      </div>
+      <div (click)="logout()" *ngIf="(user|json)!=='{}'" class="options" >
+        <span>Logout</span>
+      </div>
+      <button mat-icon-button (click)="toCart()" class="cart" title="Cart" >
+       <span style="margin-right: 5px;">Cart </span>
+        <mat-icon class="cart-icon" *ngIf="!!badgeCount" [matBadge]="badgeCount">shopping_cart</mat-icon>
+        <mat-icon class="cart-icon" *ngIf="!badgeCount">shopping_cart</mat-icon>
+      </button>  
+    </div>
+  </div>
+</mat-toolbar>

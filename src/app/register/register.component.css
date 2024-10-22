@@ -1,0 +1,66 @@
+.container {
+  padding: 0 10%;
+  padding-top:40px;
+  
+  font: normal normal 200 18px/20px Roboto ;
+}
+::ng-deep .mat-mdc-text-field-wrapper{
+  border: 1px solid #DCDCDC!important;
+}
+::ng-deep .mdc-line-ripple::before{
+  border-bottom:0!important;
+}
+::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled){
+  background-color: #fff;
+}
+
+
+.card{
+  padding: 20px 30px;
+  width:40%;
+  margin: 0 auto;
+}
+.title{
+  text-align: center;
+  text-transform: uppercase;
+}
+.dob{
+  width:70%;
+}
+.flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+}
+span{
+  position: relative;
+  top:-10px;
+}
+input{
+  width:80%;
+ 
+  height:30px;
+}
+.form-field{
+  width:60%;
+  height: 60px;
+}
+.dob{
+  height:auto;
+}
+.login-btn{
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+.login-btn button{
+  text-align: center;
+  margin:0 auto;
+  border-radius: 2px;
+  opacity: 1;
+  width:20%;
+  background: #3371B5 0% 0% no-repeat padding-box;
+  text-align: center;
+  color: #fff!important;font-weight:600;
+}
